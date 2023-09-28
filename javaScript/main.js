@@ -1,7 +1,6 @@
 /**JS-07 - Fetch & REST API */
 
-const pokeContainer = document.getElementById('poke-container');
-const BASE_URL = 'https://pokeapi.co/api/v2/pokemon/';
+const BASE_URL = 'https://pokeapi.co/api/v2/';
 
 
 /**
@@ -10,7 +9,7 @@ const BASE_URL = 'https://pokeapi.co/api/v2/pokemon/';
  */
 const fetchPokemon = async (pokemon) => {
     try {
-        const response = await fetch(`${BASE_URL}${pokemon}`);
+        const response = await fetch(`${BASE_URL}pokemon/${pokemon}`);
         const parsedResponse = await response.json(response);
         return parsedResponse;
     } catch (err) {
@@ -69,18 +68,10 @@ document.addEventListener('DOMContentLoaded', async () => {
  * @param {object} pokemon, respuesta de la función fetchPokemon
  */
 function updateCard(pokemon) {
-    const htmlStructure = {
-        name: document.getElementById('name'),
-        id: document.getElementById('weight'),
-        weight: document.getElementById('id'),
-        height: document.getElementById('height'),
-        baseExperience: document.getElementById('b-exp'),
-        img: document.getElementById('img')
-    };
-    htmlStructure.name.textContent = `Nombre: ${pokemon.name}`;
-    htmlStructure.id.textContent = `id: ${pokemon.id}`;
-    htmlStructure.weight.textContent = `Peso: ${pokemon.weight}`;
-    htmlStructure.height.textContent = `Altura: ${pokemon.height}`;
-    htmlStructure.baseExperience.textContent = `Experiencia base: ${pokemon.base_experience}`;
-    htmlStructure.img.setAttribute('src', pokemon.sprites.front_default);
+    document.getElementById('name').textContent = `Nombre: ${pokemon.name}`;
+    document.getElementById('id').textContent = `id: ${pokemon.id}`;
+    document.getElementById('weight').textContent = `Peso: ${pokemon.weight}`;
+    document.getElementById('height').textContent = `Altura: ${pokemon.height}`;
+    document.getElementById('b-exp').textContent = `Experiencia base: ${pokemon.base_experience}`;
+    document.getElementById('img').setAttribute('src', pokemon.sprites.front_default);
 };
