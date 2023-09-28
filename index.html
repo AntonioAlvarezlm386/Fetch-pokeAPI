@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <script async defer  src="./javaScript/main.js" ></script>
+    <script async defer src="./javaScript/main.js"></script>
     <title>Poke API</title>
 </head>
+
 <body>
     <div class="container">
-        <div class="card-container">
+        <div class="form-container">
             <div class="container row">
                 <label for="poke-name">Pokemon (Name/ID)</label>
                 <input type="text" id="poke-name" name="poke-name" value="">
@@ -22,10 +24,20 @@
             </div>
         </div>
 
-        <div class="card-container disabled">
-            <div class="datos"></div>
-            <div class="img"></div>
+        <div class="card-container">
+            <div class="infoCard">
+                <h3 id="name"></h3>
+                <h5 id="id"></h5>
+                <h5 id="weight"></h5>
+                <h5 id="height"></h5>
+                <h5 id="b-exp"></h5>
+            </div>
+            <div class="imgCard">
+                <img src="" alt="pokemon" id="img">
+            </div>
+
         </div>
     </div>
 </body>
-</html>
+
+</html

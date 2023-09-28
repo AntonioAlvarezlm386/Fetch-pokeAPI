@@ -8,7 +8,7 @@ body{
 }
 
 
-.card-container{
+.form-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,8 +20,8 @@ body{
     border-radius: 20px;
 }
 
+
 .row{
-    
     margin: 20px;
     display: flex;
     justify-content: space-evenly;
@@ -43,13 +43,20 @@ body{
     min-width: 110px;
 }
 
-.disabled{
-    display: none;
-}
 
 
 .btn:hover,
 .btn:focus {
     background-color: #fb8332;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2c2d39;
+    margin: 20px;
+    min-width: 450px;
+    border-radius: 20px;
 }
